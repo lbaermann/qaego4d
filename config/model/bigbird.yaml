@@ -1,0 +1,5 @@
+_target_: model.sparse_transformer.BigBirdVqaModel
+input_size: ${dataset.feature_dim}
+pretrained_bigbird: google/bigbird-pegasus-large-arxiv
+use_moment_localization_loss: False
+gradient_checkpointing: True

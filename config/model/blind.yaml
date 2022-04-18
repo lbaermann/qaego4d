@@ -1,0 +1,2 @@
+_target_: model.blind.BlindVqaModel
+pretrained_model: t5-base

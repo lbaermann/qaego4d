@@ -1,0 +1,4 @@
+_target_: model.importance_teacher.ImportanceTeacherVqaModel
+pretrained_enc_dec: t5-small
+input_size: ${dataset.feature_dim}
+fragment_length: 128

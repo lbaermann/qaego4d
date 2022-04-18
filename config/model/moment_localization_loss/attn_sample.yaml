@@ -1,0 +1,9 @@
+_target_: model.moment_loc.SamplingAttentionTransformerMomentLocLoss
+softmax_temperature: 0.1
+att_loss_type: 'lse'
+lse_alpha: 20
+num_negatives: 2
+use_hard_negatives: False
+drop_topk: 0
+negative_pool_size: 0
+num_hard: 2

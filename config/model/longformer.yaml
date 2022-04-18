@@ -1,0 +1,8 @@
+defaults:
+  - moment_localization_loss: attn_sample
+
+_target_: model.sparse_transformer.LongformerVqaModel
+pretrained_enc_dec: t5-base
+input_size: ${dataset.feature_dim}
+pretrained_longformer: allenai/longformer-base-4096
+#moment_localization_loss: null

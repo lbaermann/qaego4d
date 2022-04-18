@@ -1,0 +1,4 @@
+_target_: model.moment_loc.SummedAttentionTransformerMomentLocLoss
+softmax_temperature: 0.1
+att_loss_type: 'lse'
+lse_alpha: 20

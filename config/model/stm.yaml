@@ -1,0 +1,13 @@
+_target_: model.mann.StmEmqaModel
+pretrained_enc_dec: t5-base
+segmentation_method: avg
+input_size: ${dataset.feature_dim}
+segment_length: 32
+stm_input_size: 1024
+mem_hidden_size: 768
+stm_step: 2
+stm_num_slot: 8
+stm_mlp_size: 256
+stm_slot_size: 128
+stm_rel_size: 128
+stm_out_att_size: 128

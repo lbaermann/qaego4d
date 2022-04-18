@@ -1,0 +1,31 @@
+_target_: model.rehearsal.RehearsalMemoryEmqaModel
+pretrained_enc_dec: t5-base
+
+rehearsal_machine:
+  _target_: model.rehearsal.RehearsalMemoryMachine
+  pretrained_encoder: t5-base
+  input_dim: ${dataset.feature_dim}
+  mem_hidden_size: 768
+  num_memory_slots: 16
+  segment_length: 128
+  slot_to_item_num_heads: 1
+  use_independent_gru_per_mem_slot: False
+
+rehearsal_trainer:
+  _target_: model.rehearsal.RehearsalTrainingModule
+  input_size: ${dataset.feature_dim}
+  mem_hidden_size: ${..rehearsal_machine.mem_hidden_size}
+  num_samples: 4
+  sample_length: 128
+  positive_mask_ratio: 0.5
+  negative_replacement_ratio: 0.5
+  invert_teacher_sequence: False
+  pretrained_decoder: null
+  decoder_params:
+    hidden_size: 256
+    num_hidden_layers: 3
+    num_attention_heads: 4
+    intermediate_size: 512
+    max_position_embeddings: 132
+    vocab_size: 16 # Vocab never used (only inputs_embeds)
+  sampling_teacher_weights_file: ../22_04_b5aa4428_0/importance_teacher_weights.pt

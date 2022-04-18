@@ -1,0 +1,7 @@
+defaults:
+  - moment_localization_loss: attn_sample
+
+_target_: model.simple_vqa.SimpleVqaModel
+pretrained_enc_dec: t5-base
+input_size: ${dataset.feature_dim}
+#moment_localization_loss: null

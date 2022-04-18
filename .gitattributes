@@ -1,0 +1,14 @@
+#Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Declare files that will always have LF line endings on checkout.
+*.py text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.gitattributes text eol=lf
+*.gitignore text eol=lf
+*.json text eol=lf
+*.jgram text eol=lf
+
+#Forced Binary files
+#For example *.png binary

@@ -1,0 +1,39 @@
+defaults:
+  - dataset: ego4d
+  - model: rehearsal_mem
+  - _self_
+  - override hydra/job_logging: none
+  - override hydra/hydra_logging: none
+
+trainer:
+  detect_anomaly: True
+  #val_check_interval: 500
+  max_epochs: 100
+  accumulate_grad_batches: 4
+  auto_resume: False
+  gpus: 1
+  log_every_n_steps: 4
+  auto_lr_find: True
+  enable_progress_bar: False
+  monitor_variable: val_lm_loss
+  monitor_mode: min
+
+optim:
+  optimizer:
+    _target_: torch.optim.Adam
+    lr: 0.00001
+    weight_decay: 0
+
+  freeze: [ ]
+
+  loss_weights:
+    # lm_loss is reference
+    recollection_loss: 1
+    familiarity_loss: 0.5
+
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+

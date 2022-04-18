@@ -1,0 +1,13 @@
+data_dir: datasets/ego4d
+use_final_test: False
+feature_type: slowfast8x8_r101_k400
+feature_dim: 2304
+
+drop_val_last: True
+
+tokenizer_name: t5-base
+# separate_question_tok_name: allenai/longformer-base-4096
+
+workers: 16
+train_bsz: 8
+test_bsz: 16

@@ -1,0 +1,15 @@
+_target_: model.mann.DncEmqaModel
+pretrained_enc_dec: t5-base
+segmentation_method: avg
+input_size: ${dataset.feature_dim}
+segment_length: 32
+dnc_input_size: 1024
+rnn_hidden_size: 512
+num_dnc_layers: 2
+num_rnn_hidden_layers: 2
+num_mem_cells: 16
+mem_hidden_size: 768
+#moment_loc:
+#  _target_: model.moment_loc.SeqMomentLocalizationLossModule
+#  seq_hidden_dim: 1024
+#  question_hidden_dim: 512
