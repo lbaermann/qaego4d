@@ -1,7 +1,9 @@
 # <span style="font-variant:small-caps;">QaEgo4D</span> — Episodic-Memory-Based Question Answering on Egocentric Videos
 
 This repository contains the code to reproduce the results of the paper "Where did I leave my keys? —
-Episodic-Memory-Based Question Answering on Egocentric Videos" [Link will follow].
+Episodic-Memory-Based Question Answering on Egocentric Videos". See our
+[paper](https://openaccess.thecvf.com/content/CVPR2022W/Ego4D-EPIC/papers/Barmann_Where_Did_I_Leave_My_Keys_-_Episodic-Memory-Based_Question_Answering_CVPRW_2022_paper.pdf)
+for more details.
 
 ## Abstract
 
@@ -72,3 +74,16 @@ In order to reproduce the experiments, prepare your workspace:
    and `slowfast8x8_r101_k400.hdf5`) into `datasets/ego4d`.
 
 To run an experiment, use `bash experiment/run.sh`. All configuration files can be found in the `config` dir.
+
+
+## Cite
+```
+@InProceedings{Baermann_2022_CVPR,
+    author    = {B\"armann, Leonard and Waibel, Alex},
+    title     = {Where Did I Leave My Keys? - Episodic-Memory-Based Question Answering on Egocentric Videos},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2022},
+    pages     = {1560-1568}
+}
+```
