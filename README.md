@@ -28,7 +28,7 @@ research on egocentric VideoQA as well as episodic memory representation and ret
 To use the <span style="font-variant:small-caps;">QaEgo4D</span> dataset introduced in our paper, please follow these
 steps:
 
-1. <span style="font-variant:small-caps;">QaEgo4D</span> builds on the Ego4D videos and annotations. If you do not have
+1. <span style="font-variant:small-caps;">QaEgo4D</span> builds on the Ego4D v1 videos and annotations. If you do not have
    access to Ego4D already, you should follow the steps at the [Ego4D website](https://ego4d-data.org/docs/start-here/)
 2. To get access to <span style="font-variant:small-caps;">QaEgo4D</span>, please fill out
    this [Google form](https://forms.gle/Gxs93wwC5YYJtjqh8). You will need to sign a license agreement, but there are no
